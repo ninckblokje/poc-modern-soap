@@ -1,0 +1,14 @@
+GET http://localhost:8080/cxf/HelloWorldService?wsdl
+
+###
+
+POST http://localhost:8080/cxf/HelloWorldService
+Content-Type: text/xml
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="ninckblokje/HelloWorld">
+    <soap:Body>
+        <tns:helloWorld>
+            <name>IntelliJ</name>
+        </tns:helloWorld>
+    </soap:Body>
+</soap:Envelope>
