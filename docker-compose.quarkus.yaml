@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  quarkus-cxf-soap-server:
+    image: ninckblokje/quarkus-cxf-soap-server:1.0.0-SNAPSHOT
+    ports:
+    - 8080:8080
+  quarkus-cxf-soap-client:
+    image: ninckblokje/quarkus-cxf-soap-client:1.0.0-SNAPSHOT
+    ports:
+    - 8081:8081
+    environment:
+      - quarkus.cxf.client."HelloWorld".client-endpoint-url=http://quarkus-cxf-soap-server:8080/cxf/HelloWorldService
+      - quarkus.cxf.client."PingPong".client-endpoint-url=http://quarkus-cxf-soap-server:8080/cxf/PingPongService
