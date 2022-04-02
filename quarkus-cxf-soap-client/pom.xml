@@ -29,16 +29,17 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ninckblokje.poc.modern.soap.quarkus</groupId>
   <artifactId>quarkus-cxf-soap-client</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <properties>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.release>11</maven.compiler.release>
     <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <quarkus.cxf.version>0.13.1</quarkus.cxf.version>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-    <quarkus.platform.version>2.6.1.Final</quarkus.platform.version>
+    <quarkus.platform.version>2.7.5.Final</quarkus.platform.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
   </properties>
   <dependencyManagement>
@@ -56,7 +57,7 @@
     <dependency>
       <groupId>io.quarkiverse.cxf</groupId>
       <artifactId>quarkus-cxf</artifactId>
-      <version>0.12.0</version>
+      <version>${quarkus.cxf.version}</version>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>

@@ -56,7 +56,7 @@ import static ninckblokje.pingpong.Framework.JAKARTA_EE;
 public class PingPongServiceImpl implements PingPongService {
 
     @Inject
-    private HostService service;
+    HostService service;
     @Resource
     private WebServiceContext ctx;
 
