@@ -102,7 +102,6 @@
                 <configuration>
                     <to>
                         <image>ninckblokje/jakarta-soap-service</image>
-                        <credHelper>wincred</credHelper>
                     </to>
                     <from>
                         <image>icr.io/appcafe/open-liberty:22.0.0.5-full-java17-openj9-ubi</image>
