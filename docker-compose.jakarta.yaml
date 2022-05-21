@@ -1,6 +1,13 @@
 version: '3.8'
 services:
-  jakarta-soap-server:
+  jakarta-soap-service:
     image: ninckblokje/jakarta-soap-service:latest
     ports:
-    - 9080:9080
+      - 9080:9080
+  jakarta-soap-client:
+    image: ninckblokje/jakarta-soap-client:latest
+    ports:
+      - 9081:9081
+    environment:
+      - HELLOWORLD_WSDL_URL=http://jakarta-soap-service:9080/jakarta-soap-service/HelloWorldService?wsdl
+      - PINGPONG_WSDL_URL=http://jakarta-soap-service:9080/jakarta-soap-service/PingPongService?wsdl
