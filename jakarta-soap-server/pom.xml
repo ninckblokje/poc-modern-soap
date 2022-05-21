@@ -31,12 +31,12 @@
 
     <groupId>ninckblokje.poc.modern.soap.jakarta</groupId>
     <artifactId>jakarta-soap-service</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -45,6 +45,13 @@
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-api</artifactId>
             <version>9.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.microprofile</groupId>
+            <artifactId>microprofile</artifactId>
+            <version>5.0</version>
+            <type>pom</type>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -56,12 +63,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>3.3.1</version>
+                    <version>3.3.2</version>
                 </plugin>
                 <plugin>
                     <groupId>io.openliberty.tools</groupId>
                     <artifactId>liberty-maven-plugin</artifactId>
-                    <version>3.5.1</version>
+                    <version>3.5.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -85,20 +92,20 @@
                 <groupId>io.openliberty.tools</groupId>
                 <artifactId>liberty-maven-plugin</artifactId>
                 <configuration>
-                    <libertyRuntimeVersion>21.0.0.12</libertyRuntimeVersion>
+                    <libertyRuntimeVersion>22.0.0.5</libertyRuntimeVersion>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
-                <version>3.1.4</version>
+                <version>3.2.1</version>
                 <configuration>
                     <to>
                         <image>ninckblokje/jakarta-soap-service</image>
                         <credHelper>wincred</credHelper>
                     </to>
                     <from>
-                        <image>icr.io/appcafe/open-liberty:21.0.0.12-full-java11-openj9-ubi</image>
+                        <image>icr.io/appcafe/open-liberty:22.0.0.5-full-java17-openj9-ubi</image>
                         <platforms>
                             <platform>
                                 <architecture>amd64</architecture>

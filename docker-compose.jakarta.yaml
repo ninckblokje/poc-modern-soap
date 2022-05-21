@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  jakarta-soap-server:
+    image: ninckblokje/jakarta-soap-service:latest
+    ports:
+    - 9080:9080
